@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: jean-test
+
+resources:
+  - pod.yaml
+
+configMapGenerator:
+  - name: gpu-script
+    files:
+      - run.sh
