@@ -24,25 +24,25 @@ spec:
           mountPath: /opt/script
         - name: scratch-volume
           mountPath: /scratch
-    - name: gpu-container-2
-      image: 308535385114.dkr.ecr.us-east-1.amazonaws.com/pytorch/ci-image:pytorch-linux-jammy-cuda12.8-cudnn9-py3-gcc9-inductor-benchmarks-ffeded2190e403ba38d2387ad7d31aeee6498475
-      resources:
-        requests:
-          cpu: "10"
-          memory: "30Gi"
-          nvidia.com/gpu: "1"
-        limits:
-          cpu: "10"
-          memory: "30Gi"
-          nvidia.com/gpu: "1"
-      command:
-        - /bin/bash
-        - /opt/script/run.sh
-      volumeMounts:
-        - name: script-volume
-          mountPath: /opt/script
-        - name: scratch-volume-2
-          mountPath: /scratch
+    # - name: gpu-container-2
+    #   image: 308535385114.dkr.ecr.us-east-1.amazonaws.com/pytorch/ci-image:pytorch-linux-jammy-cuda12.8-cudnn9-py3-gcc9-inductor-benchmarks-ffeded2190e403ba38d2387ad7d31aeee6498475
+    #   resources:
+    #     requests:
+    #       cpu: "10"
+    #       memory: "30Gi"
+    #       nvidia.com/gpu: "1"
+    #     limits:
+    #       cpu: "10"
+    #       memory: "30Gi"
+    #       nvidia.com/gpu: "1"
+    #   command:
+    #     - /bin/bash
+    #     - /opt/script/run.sh
+    #   volumeMounts:
+    #     - name: script-volume
+    #       mountPath: /opt/script
+    #     - name: scratch-volume-2
+    #       mountPath: /scratch
   volumes:
     - name: script-volume
       configMap:
@@ -51,9 +51,9 @@ spec:
     - name: scratch-volume
       emptyDir:
         sizeLimit: "800Gi"
-    - name: scratch-volume-2
-      emptyDir:
-        sizeLimit: "800Gi"
+    # - name: scratch-volume-2
+    #   emptyDir:
+    #     sizeLimit: "800Gi"
   tolerations:
     - key: "jeanTest"
       operator: "Equal"
