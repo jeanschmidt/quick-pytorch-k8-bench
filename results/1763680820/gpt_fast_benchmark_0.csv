@@ -1,0 +1,16 @@
+name,metric,target,actual,dtype,device,arch,is_model
+Llama-2-7b-chat-hf,token_per_sec,94,3.39,bfloat16,cpu,x86_64,True
+Llama-2-7b-chat-hf,memory_bandwidth(GB/s),1253,44.83,bfloat16,cpu,x86_64,True
+Llama-2-7b-chat-hf,compilation_time(s),133,140.50,bfloat16,cpu,x86_64,True
+Llama-2-7b-chat-hf,token_per_sec,144,7.02,int8,cpu,x86_64,True
+Llama-2-7b-chat-hf,memory_bandwidth(GB/s),957,46.39,int8,cpu,x86_64,True
+Llama-2-7b-chat-hf,compilation_time(s),136,95.99,int8,cpu,x86_64,True
+Mixtral-8x7B-v0.1,token_per_sec,175,6.41,int8,cpu,x86_64,True
+Mixtral-8x7B-v0.1,memory_bandwidth(GB/s),1130,41.28,int8,cpu,x86_64,True
+Mixtral-8x7B-v0.1,compilation_time(s),133,79.45,int8,cpu,x86_64,True
+mlp_layer_norm_gelu,flops_utilization,0.8,20.28,bfloat16,cpu,x86_64,False
+layer_norm,memory_bandwidth(GB/s),950,20.01,bfloat16,cpu,x86_64,False
+gather_gemv,memory_bandwidth(GB/s),990,21.50,int8,cpu,x86_64,False
+gather_gemv,memory_bandwidth(GB/s),1060,50.68,bfloat16,cpu,x86_64,False
+gemv,memory_bandwidth(GB/s),870,33.41,int8,cpu,x86_64,False
+gemv,memory_bandwidth(GB/s),990,52.30,bfloat16,cpu,x86_64,False
